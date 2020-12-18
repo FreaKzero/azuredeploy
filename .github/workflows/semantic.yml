@@ -10,6 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: codfish/semantic-release-action@master
+
+      - name: Install dependencies
+        run: yarn --frozen-lockfile
+        
+      - name: semantic release
+        uses: codfish/semantic-release-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
