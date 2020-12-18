@@ -10,4 +10,7 @@ router.get('/test', function(req, res, next) {
   res.render('index', { title: process.env.ENVTEST || 'No ENVTEST var found' });
 });
 
+router.get('/yay', function(req, res, next) {
+  res.render('index', { title: process.env.ENVTEST || 'No ENVTEST var found' });
+});
 module.exports = router;
