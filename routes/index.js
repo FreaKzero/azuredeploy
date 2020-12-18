@@ -18,4 +18,7 @@ router.get('/wat', function(req, res, next) {
   res.render('index', { title: process.env.ENVTEST || 'No ENVTEST var found' });
 });
 
+router.get('/someother', function(req, res, next) {
+  res.render('index', { title: process.env.ENVTEST || 'No ENVTEST var found' });
+});
 module.exports = router;
